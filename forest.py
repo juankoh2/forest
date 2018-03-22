@@ -2,7 +2,7 @@ from sklearn import tree
 
 import pandas as pd
 mydata= pd.read_csv('training.csv')
-training_labels = mydata.iloc[:,8]
+training_labels = mydata.iloc[1:198,2]
 
 from sklearn import preprocessing
 le = preprocessing.LabelEncoder()
@@ -18,7 +18,7 @@ class_names=["Sugi","Hinoki","mixed deciduous","non-forest land"])
 graph = graphviz.Source(dot_data)
 
 
-graph.view('Iris')
+graph.view('Forest')
 
 
 
