@@ -27,12 +27,13 @@ import numpy as np
 myTest = pd.read_csv('testing.csv')
 myTestData = myTest.iloc[:,1:28]
 prediction = clf.predict(myTestData)
-target = myTest.iloc[]
+target = myTest.iloc[:,0]
+target = le.fit_transform(target)
 
-import sklearn.metrics import accuracy_score, confusion_matrix
-print (accuracy_score())
+from sklearn.metrics import accuracy_score, confusion_matrix
+# print (accuracy_score(target,prediction))
+print (confusion_matrix(target,prediction))
 
-irisTarget=
 
 
 
