@@ -1,0 +1,33 @@
+digraph Tree {
+node [shape=box, style="filled, rounded", color="black", fontname=helvetica] ;
+edge [fontname=helvetica] ;
+0 [label=<b2 &le; 34.5<br/>gini = 0.687<br/>samples = 325<br/>value = [105, 38, 46, 136]<br/>class = non-forest land>, fillcolor="#d739e524"] ;
+1 [label=<b4 &le; 109.5<br/>gini = 0.472<br/>samples = 188<br/>value = [18, 38, 2, 130]<br/>class = non-forest land>, fillcolor="#d739e59c"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label=<b1 &le; 42.5<br/>gini = 0.325<br/>samples = 159<br/>value = [17, 11, 2, 129]<br/>class = non-forest land>, fillcolor="#d739e5c9"] ;
+1 -> 2 ;
+3 [label=<gini = 0.561<br/>samples = 17<br/>value = [10, 1, 1, 5]<br/>class = Sugi>, fillcolor="#e581396a"] ;
+2 -> 3 ;
+4 [label=<gini = 0.23<br/>samples = 142<br/>value = [7, 10, 1, 124]<br/>class = non-forest land>, fillcolor="#d739e5dc"] ;
+2 -> 4 ;
+5 [label=<pred_minus_obs_H_b4 &le; -9.465<br/>gini = 0.131<br/>samples = 29<br/>value = [1, 27, 0, 1]<br/>class = Hinoki>, fillcolor="#47e539ed"] ;
+1 -> 5 ;
+6 [label=<gini = 0.069<br/>samples = 28<br/>value = [0, 27, 0, 1]<br/>class = Hinoki>, fillcolor="#47e539f6"] ;
+5 -> 6 ;
+7 [label=<gini = 0.0<br/>samples = 1<br/>value = [1, 0, 0, 0]<br/>class = Sugi>, fillcolor="#e58139ff"] ;
+5 -> 7 ;
+8 [label=<pred_minus_obs_H_b8 &le; -2.51<br/>gini = 0.492<br/>samples = 137<br/>value = [87, 0, 44, 6]<br/>class = Sugi>, fillcolor="#e5813976"] ;
+0 -> 8 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+9 [label=<pred_minus_obs_H_b3 &le; -29.945<br/>gini = 0.145<br/>samples = 38<br/>value = [3, 0, 35, 0]<br/>class = mixed deciduous>, fillcolor="#399de5e9"] ;
+8 -> 9 ;
+10 [label=<gini = 0.0<br/>samples = 1<br/>value = [1, 0, 0, 0]<br/>class = Sugi>, fillcolor="#e58139ff"] ;
+9 -> 10 ;
+11 [label=<gini = 0.102<br/>samples = 37<br/>value = [2, 0, 35, 0]<br/>class = mixed deciduous>, fillcolor="#399de5f0"] ;
+9 -> 11 ;
+12 [label=<pred_minus_obs_H_b5 &le; -27.335<br/>gini = 0.268<br/>samples = 99<br/>value = [84, 0, 9, 6]<br/>class = Sugi>, fillcolor="#e58139d4"] ;
+8 -> 12 ;
+13 [label=<gini = 0.196<br/>samples = 92<br/>value = [82, 0, 9, 1]<br/>class = Sugi>, fillcolor="#e58139e0"] ;
+12 -> 13 ;
+14 [label=<gini = 0.408<br/>samples = 7<br/>value = [2, 0, 0, 5]<br/>class = non-forest land>, fillcolor="#d739e599"] ;
+12 -> 14 ;
+}
