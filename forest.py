@@ -1,7 +1,7 @@
 from sklearn import tree
 
 import pandas as pd
-mydata= pd.read_csv('training.csv')
+mydata= pd.read_csv('testing.csv')
 
 training_labels = mydata.iloc[:,0]
 mydataframe = mydata.iloc[:, 1:28]
@@ -10,7 +10,7 @@ from sklearn import preprocessing
 le = preprocessing.LabelEncoder()
 label = le.fit_transform(training_labels)
 
-clf = tree.DecisionTreeClassifier(max_depth=10)
+clf = tree.DecisionTreeClassifier(max_depth=6)
 clf = clf.fit(mydataframe, label)
 
 import graphviz
@@ -21,8 +21,10 @@ filled=True, rounded=True,
 special_characters=True)
 
 graph = graphviz.Source(dot_data)
+graph.view('7')
 
 import numpy as np
+
 
 myTest = pd.read_csv('testing.csv')
 myTestData = myTest.iloc[:,1:28]
@@ -35,6 +37,4 @@ print (accuracy_score())
 irisTarget=
 
 
-
-graph.view('rgk')
 
