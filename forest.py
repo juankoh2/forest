@@ -10,7 +10,7 @@ from sklearn import preprocessing
 le = preprocessing.LabelEncoder()
 label = le.fit_transform(training_labels)
 
-clf = tree.DecisionTreeClassifier(max_depth=6)
+clf = tree.DecisionTreeClassifier(max_depth=10)
 clf = clf.fit(mydataframe, label)
 
 import graphviz
@@ -21,7 +21,7 @@ filled=True, rounded=True,
 special_characters=True)
 
 graph = graphviz.Source(dot_data)
-graph.view('7')
+graph.view('13')
 
 import numpy as np
 
@@ -33,8 +33,9 @@ target = myTest.iloc[:,0]
 target = le.fit_transform(target)
 
 from sklearn.metrics import accuracy_score, confusion_matrix
-# print (accuracy_score(target,prediction))
-# print (confusion_matrix(target,prediction))
+print (accuracy_score(target,prediction))
+print (confusion_matrix(target,prediction))
+
 
 
 

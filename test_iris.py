@@ -31,6 +31,8 @@ graph = graphviz.Source(dot_data)
 
 
 graph.view('Iris')
+
 from sklearn.metrics import confusion_matrix
-print(confusion_matrix(target, prediction))
+
+print(confusion_matrix(iris.target, ))
 
