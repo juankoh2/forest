@@ -32,7 +32,7 @@ target = le.fit_transform(target)
 
 from sklearn.metrics import accuracy_score, confusion_matrix
 # print (accuracy_score(target,prediction))
-print (confusion_matrix(target,prediction))
+# print (confusion_matrix(target,prediction))
 
 
 
