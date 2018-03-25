@@ -10,7 +10,7 @@ from sklearn import preprocessing
 le = preprocessing.LabelEncoder()
 label = le.fit_transform(training_labels)
 
-clf = tree.DecisionTreeClassifier(max_depth=10)
+clf = tree.DecisionTreeClassifier(max_depth=1)
 clf = clf.fit(mydataframe, label)
 
 import graphviz
@@ -21,12 +21,11 @@ filled=True, rounded=True,
 special_characters=True)
 
 graph = graphviz.Source(dot_data)
-graph.view('13')
+graph.view('image8')
 
 import numpy as np
 
-
-myTest = pd.read_csv('testing.csv')
+myTest = pd.read_csv('training.csv')
 myTestData = myTest.iloc[:,1:28]
 prediction = clf.predict(myTestData)
 target = myTest.iloc[:,0]
